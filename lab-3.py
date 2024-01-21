@@ -18,7 +18,13 @@ def exploit_sqli_column_number(url):
         res = r.text
         if "Internal Server Error" in res:
             return i - 1
-    return False
+    return False 
+    '''Certainly! The `return False` statement in the `exploit_sqli_column_number` function is used 
+    to indicate that the SQL injection attack to determine the number of 
+    columns was unsuccessful. When the condition for "Internal Server Error" is not met 
+    during the loop, it means the current attempt did not reveal the correct number 
+    of columns, and `False` is returned to signal this failure to the calling code.'''
+    
 
 if __name__ == "__main__":
     try:
