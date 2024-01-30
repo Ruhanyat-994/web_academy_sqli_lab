@@ -38,3 +38,5 @@ if __name__ == "__main__":
     print("[+] Dumping the list of usernames and passwords...")
     if not exploit_sqli_users_table(url):
         print("[-] Did not find an administrator password.")
+
+#always build the loginc first and then sit to code
