@@ -39,4 +39,4 @@ if __name__ == "__main__":
     if not exploit_sqli_users_table(url):
         print("[-] Did not find an administrator password.")
 
-#always build the loginc first and then sit to code
+#always build the logic first and then sit to code
