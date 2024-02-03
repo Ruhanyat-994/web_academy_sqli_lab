@@ -3,6 +3,11 @@ import sys
 import urllib3
 from bs4 import BeautifulSoup
 import re
+import pyfiglet
+
+# Display a banner using pyfiglet
+ascii_banner = pyfiglet.figlet_format("RuhanSec")
+print(ascii_banner)
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
