@@ -1,0 +1,5 @@
+when ever you find any problem to write the regex you can cross check it through 
+this website https://regex101.com/
+
+1. at first you will write your command 
+2. than you will paste your desire output and thats how you can check it
