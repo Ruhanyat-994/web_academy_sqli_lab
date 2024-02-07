@@ -1,0 +1,9 @@
+-------------------------------------Python Scripting Tips by Ruhanyat------------------------------
+
+1. when ever you are thinking about to script you need to know about your end goal
+2. in this repo we were making some sqli tool that will be worked on different different situation
+3. when we will complete our  manual injection we will keep eye on our main steps of injection
+4. we will start from the first point and we will code it up
+5. suppose we have used 4 main payloads 
+6. for this case we can create four functions for particular payload
+7. This type of thinking process will make our code clean and make us able to code perfectly
