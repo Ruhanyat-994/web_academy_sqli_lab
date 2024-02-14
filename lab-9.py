@@ -74,3 +74,5 @@ if __name__=="__main__":
     else:
         print("Did not find a users table.")
 
+print("For testing")
+
