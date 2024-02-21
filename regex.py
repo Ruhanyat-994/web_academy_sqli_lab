@@ -4,7 +4,7 @@ text= '''
 
 Related Views
 
-    DBA_TABLES describes all relational tables in the database.
+    DBA_TABLES describes all relational tables in the database. 
     Cyclone 
     Cyclone 
     Dyclone
@@ -20,3 +20,9 @@ Related Views
 matchs = re.finditer(pattern,text)
 for match in matchs:
     print(text[match.span()[0]:match.span()[1]])
+
+    '''
+        abc.* would match "abc", "abc123", "abcXYZ", etc.
+    .*xyz would match "xyz", "123xyz", "XYZxyz", etc.
+    .* would match any string or an empty string.
+    '''
