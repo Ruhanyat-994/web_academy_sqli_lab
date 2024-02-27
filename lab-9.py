@@ -12,7 +12,7 @@ print(ascii_banner)
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-proxies = {'http': 'http://127.0.0.1:8080','https':'https://127.0.0.1:8080'}
+proxies = {'http': 'http://127.0.0.1:8080'}
 
 def perform_request(url,sql_payload):
     path = "/filer?category="
