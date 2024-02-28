@@ -9,7 +9,7 @@ ascii_banner = pyfiglet.figlet_format("RuhanSec")
 print(ascii_banner)
 
 
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning) # this thing is done for ignore the exceptions from the certificate(CA)
 
 proxies = {'http': 'http://127.0.0.1:8080'}
 
