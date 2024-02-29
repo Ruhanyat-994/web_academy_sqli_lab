@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 ascii_banner = pyfiglet.figlet_format("RuhanSec\nSQLI\nSCRIPT")
 print(ascii_banner)
 
-proxy = {'http': 'http://127.0.0.1:8080','https': 'https://127.0.0.1:8080'}
+proxy = {'http': 'http://127.0.0.1:8080'}
 
 
 def get_csrf_token(s,url):
