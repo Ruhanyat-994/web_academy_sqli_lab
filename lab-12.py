@@ -2,8 +2,13 @@ import requests
 import sys
 import urllib3
 import urllib.parse
+import pyfiglet
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+# Display a banner using pyfiglet
+ascii_banner = pyfiglet.figlet_format("RuhanSec")
+print(ascii_banner)
+
 
 proxies = {'http': 'http://127.0.0.1:8080'}
 
